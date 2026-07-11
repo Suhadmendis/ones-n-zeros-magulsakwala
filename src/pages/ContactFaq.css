@@ -1,0 +1,45 @@
+.cf-intro {
+  margin-top: calc(-1 * var(--header-height));
+  padding: calc(40px + var(--header-height)) 20px 24px;
+  text-align: center;
+  background: var(--color-blush);
+
+  p {
+    margin-top: 12px;
+  }
+
+  @media (min-width: 768px) {
+    padding: calc(64px + var(--header-height)) 48px 32px;
+  }
+}
+
+.cf-faqs {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    padding: 48px 48px;
+  }
+}
+
+.cf-card h2 {
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+.cf-contact {
+  padding: 40px 20px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  @media (min-width: 768px) {
+    padding: 56px 48px 72px;
+  }
+}

@@ -1,0 +1,1314 @@
+[
+  {
+    "id": 156,
+    "page": "auth",
+    "section": "form_errors",
+    "key": "name_required",
+    "content_en": "Please enter your name.",
+    "content_si": "කරුණාකර ඔබේ නම ඇතුළත් කරන්න."
+  },
+  {
+    "id": 157,
+    "page": "auth",
+    "section": "form_errors",
+    "key": "email_required",
+    "content_en": "Please enter your email.",
+    "content_si": "කරුණාකර විද්‍යුත් තැපෑල ඇතුළත් කරන්න."
+  },
+  {
+    "id": 158,
+    "page": "auth",
+    "section": "form_errors",
+    "key": "email_invalid",
+    "content_en": "Please enter a valid email address.",
+    "content_si": "කරුණාකර වලංගු විද්‍යුත් තැපැල් ලිපිනයක් ඇතුළත් කරන්න."
+  },
+  {
+    "id": 159,
+    "page": "auth",
+    "section": "form_errors",
+    "key": "email_taken",
+    "content_en": "An account with this email already exists.",
+    "content_si": "මෙම විද්‍යුත් තැපෑලෙන් ගිණුමක් දැනටමත් පවතී."
+  },
+  {
+    "id": 160,
+    "page": "auth",
+    "section": "form_errors",
+    "key": "password_required",
+    "content_en": "Please enter a password.",
+    "content_si": "කරුණාකර රහස්පදයක් ඇතුළත් කරන්න."
+  },
+  {
+    "id": 161,
+    "page": "auth",
+    "section": "form_errors",
+    "key": "password_min_length",
+    "content_en": "Password must be at least 8 characters.",
+    "content_si": "රහස්පදය අවම වශයෙන් අක්ෂර 8ක් විය යුතුය."
+  },
+  {
+    "id": 162,
+    "page": "auth",
+    "section": "form_errors",
+    "key": "invalid_credentials",
+    "content_en": "Incorrect email or password.",
+    "content_si": "වැරදි විද්‍යුත් තැපෑලක් හෝ රහස්පදයක්."
+  },
+  {
+    "id": 163,
+    "page": "auth",
+    "section": "form_errors",
+    "key": "google_verify_failed",
+    "content_en": "Google sign-in failed. Please try again.",
+    "content_si": "Google පිවිසුම අසාර්ථක විය. නැවත උත්සාහ කරන්න."
+  },
+  {
+    "id": 164,
+    "page": "auth",
+    "section": "form_errors",
+    "key": "err_generic",
+    "content_en": "Something went wrong. Please try again.",
+    "content_si": "යමක් වැරදී ගියේය. නැවත උත්සාහ කරන්න."
+  },
+  {
+    "id": 147,
+    "page": "auth",
+    "section": "signin",
+    "key": "heading",
+    "content_en": "Welcome back",
+    "content_si": "නැවත සාදරයෙන් පිළිගනිමු"
+  },
+  {
+    "id": 148,
+    "page": "auth",
+    "section": "signin",
+    "key": "subtext",
+    "content_en": "Sign in to continue to your account.",
+    "content_si": "ඔබේ ගිණුමට පිවිසීමට ලොග් වන්න."
+  },
+  {
+    "id": 149,
+    "page": "auth",
+    "section": "signin",
+    "key": "label_email",
+    "content_en": "Email",
+    "content_si": "විද්‍යුත් තැපෑල"
+  },
+  {
+    "id": 150,
+    "page": "auth",
+    "section": "signin",
+    "key": "label_password",
+    "content_en": "Password",
+    "content_si": "රහස්පදය"
+  },
+  {
+    "id": 151,
+    "page": "auth",
+    "section": "signin",
+    "key": "btn_submit",
+    "content_en": "Sign in",
+    "content_si": "පිවිසෙන්න"
+  },
+  {
+    "id": 152,
+    "page": "auth",
+    "section": "signin",
+    "key": "btn_submitting",
+    "content_en": "Signing in…",
+    "content_si": "පිවිසෙමින්…"
+  },
+  {
+    "id": 153,
+    "page": "auth",
+    "section": "signin",
+    "key": "divider_text",
+    "content_en": "or",
+    "content_si": "හෝ"
+  },
+  {
+    "id": 154,
+    "page": "auth",
+    "section": "signin",
+    "key": "switch_prompt",
+    "content_en": "Don't have an account?",
+    "content_si": "ගිණුමක් නැද්ද?"
+  },
+  {
+    "id": 155,
+    "page": "auth",
+    "section": "signin",
+    "key": "switch_link",
+    "content_en": "Sign up",
+    "content_si": "ලියාපදිංචි වන්න"
+  },
+  {
+    "id": 137,
+    "page": "auth",
+    "section": "signup",
+    "key": "heading",
+    "content_en": "Create your account",
+    "content_si": "ඔබේ ගිණුම සාදන්න"
+  },
+  {
+    "id": 138,
+    "page": "auth",
+    "section": "signup",
+    "key": "subtext",
+    "content_en": "Join Magul Sakwala to save and manage your matches.",
+    "content_si": "ඔබේ ගැලපීම් සුරැකීමට හා කළමනාකරණය කිරීමට මගුල් සක්වළට එකතු වන්න."
+  },
+  {
+    "id": 139,
+    "page": "auth",
+    "section": "signup",
+    "key": "label_name",
+    "content_en": "Full name",
+    "content_si": "සම්පූර්ණ නම"
+  },
+  {
+    "id": 140,
+    "page": "auth",
+    "section": "signup",
+    "key": "label_email",
+    "content_en": "Email",
+    "content_si": "විද්‍යුත් තැපෑල"
+  },
+  {
+    "id": 141,
+    "page": "auth",
+    "section": "signup",
+    "key": "label_password",
+    "content_en": "Password",
+    "content_si": "රහස්පදය"
+  },
+  {
+    "id": 142,
+    "page": "auth",
+    "section": "signup",
+    "key": "btn_submit",
+    "content_en": "Create account",
+    "content_si": "ගිණුම සාදන්න"
+  },
+  {
+    "id": 143,
+    "page": "auth",
+    "section": "signup",
+    "key": "btn_submitting",
+    "content_en": "Creating account…",
+    "content_si": "ගිණුම සාදමින්…"
+  },
+  {
+    "id": 144,
+    "page": "auth",
+    "section": "signup",
+    "key": "divider_text",
+    "content_en": "or",
+    "content_si": "හෝ"
+  },
+  {
+    "id": 145,
+    "page": "auth",
+    "section": "signup",
+    "key": "switch_prompt",
+    "content_en": "Already have an account?",
+    "content_si": "දැනටමත් ගිණුමක් තිබේද?"
+  },
+  {
+    "id": 146,
+    "page": "auth",
+    "section": "signup",
+    "key": "switch_link",
+    "content_en": "Sign in",
+    "content_si": "පිවිසෙන්න"
+  },
+  {
+    "id": 84,
+    "page": "contact-faq",
+    "section": "contact",
+    "key": "heading",
+    "content_en": "Still have a question?",
+    "content_si": "තවමත් ප්‍රශ්නයක් තිබේද?"
+  },
+  {
+    "id": 85,
+    "page": "contact-faq",
+    "section": "contact",
+    "key": "subtext",
+    "content_en": "Reach out directly and we'll get back to you.",
+    "content_si": "අප සමඟ සෘජුව සම්බන්ධ වන්න. හැකි ඉක්මනින් ඔබට ප්‍රතිචාර දක්වන්නෙමු."
+  },
+  {
+    "id": 86,
+    "page": "contact-faq",
+    "section": "contact",
+    "key": "email",
+    "content_en": "hello@magulsakwala.lk",
+    "content_si": "hello@magulsakwala.lk"
+  },
+  {
+    "id": 78,
+    "page": "contact-faq",
+    "section": "faqs",
+    "key": "q1",
+    "content_en": "Who runs this?",
+    "content_si": "මෙය පවත්වාගෙන යන්නේ කවුද?"
+  },
+  {
+    "id": 79,
+    "page": "contact-faq",
+    "section": "faqs",
+    "key": "a1",
+    "content_en": "Magul Sakwala is run by a small private team — not an open platform or public company. Every profile is reviewed personally, by hand.",
+    "content_si": "මඟුල් සක්වළ පවත්වාගෙන යනු ලබන්නේ කුඩා පෞද්ගලික කණ්ඩායමක් විසිනි. මෙය විවෘත වේදිකාවක් හෝ පොදු සමාගමක් නොවේ. සෑම පැතිකඩක්ම පුද්ගලිකව, අතින්ම සත්‍යාපනය කර සමාලෝචනය කරනු ලැබේ."
+  },
+  {
+    "id": 80,
+    "page": "contact-faq",
+    "section": "faqs",
+    "key": "q2",
+    "content_en": "Is it free?",
+    "content_si": "මෙය නොමිලේ සේවාවක්ද?"
+  },
+  {
+    "id": 81,
+    "page": "contact-faq",
+    "section": "faqs",
+    "key": "a2",
+    "content_en": "Registration and profile review are free. [Placeholder — confirm final pricing with client before launch.]",
+    "content_si": "ලියාපදිංචිය සහ පැතිකඩ සත්‍යාපනය නොමිලේ සිදු කෙරේ. [තාවකාලික සටහන — සේවාව ආරම්භ කිරීමට පෙර අවසන් ගාස්තු සේවාදායකයා සමඟ තහවුරු කළ යුතුය.]"
+  },
+  {
+    "id": 82,
+    "page": "contact-faq",
+    "section": "faqs",
+    "key": "q3",
+    "content_en": "How long until I hear back?",
+    "content_si": "ප්‍රතිචාරයක් ලැබීමට කොපමණ කාලයක් ගත වේද?"
+  },
+  {
+    "id": 83,
+    "page": "contact-faq",
+    "section": "faqs",
+    "key": "a3",
+    "content_en": "Every profile is reviewed by hand, so timing varies. [Placeholder — confirm typical turnaround with client before launch.]",
+    "content_si": "සෑම පැතිකඩක්ම පුද්ගලිකව අතින් සමාලෝචනය කරනු ලබන බැවින්, ප්‍රතිචාර ලබාදීමේ කාලය වෙනස් විය හැක. [තාවකාලික සටහන — සාමාන්‍ය ප්‍රතිචාර කාලය සේවාව ආරම්භ කිරීමට පෙර සේවාදායකයා සමඟ තහවුරු කළ යුතුය.]"
+  },
+  {
+    "id": 76,
+    "page": "contact-faq",
+    "section": "intro",
+    "key": "heading",
+    "content_en": "Contact / FAQ",
+    "content_si": "අප අමතන්න / නිතර අසන ප්‍රශ්න"
+  },
+  {
+    "id": 77,
+    "page": "contact-faq",
+    "section": "intro",
+    "key": "subtext",
+    "content_en": "Answers to the questions we hear most, plus a direct line to us.",
+    "content_si": "නිතර අසනු ලබන ප්‍රශ්න සඳහා පිළිතුරු සහ අප සමඟ සෘජුව සම්බන්ධ වීමට පහසු මාර්ගයක්."
+  },
+  {
+    "id": 102,
+    "page": "footer",
+    "section": "brand",
+    "key": "wordmark",
+    "content_en": "Magul Sakwala",
+    "content_si": "මඟුල් සක්වළ"
+  },
+  {
+    "id": 103,
+    "page": "footer",
+    "section": "brand",
+    "key": "tagline",
+    "content_en": "A private, trusted introduction service for Sri Lankan families.",
+    "content_si": "ශ්‍රී ලාංකික පවුල් සඳහා විශ්වාසදායක පෞද්ගලික මංගල හඳුන්වාදීමේ සේවාව."
+  },
+  {
+    "id": 104,
+    "page": "footer",
+    "section": "brand",
+    "key": "copyright",
+    "content_en": "Magul Sakwala © {year}. All rights reserved.",
+    "content_si": "මඟුල් සක්වළ © {year}. සියලු හිමිකම් ඇවිරිණි."
+  },
+  {
+    "id": 95,
+    "page": "footer",
+    "section": "info",
+    "key": "label_address",
+    "content_en": "Address",
+    "content_si": "ලිපිනය"
+  },
+  {
+    "id": 96,
+    "page": "footer",
+    "section": "info",
+    "key": "address",
+    "content_en": "[Address — client to provide]",
+    "content_si": "[ලිපිනය — සේවාදායකයා විසින් ලබා දිය යුතුය]"
+  },
+  {
+    "id": 97,
+    "page": "footer",
+    "section": "info",
+    "key": "label_email",
+    "content_en": "Email",
+    "content_si": "විද්‍යුත් තැපෑල"
+  },
+  {
+    "id": 98,
+    "page": "footer",
+    "section": "info",
+    "key": "label_hotline",
+    "content_en": "Hotline",
+    "content_si": "උණුසුම් දුරකථන අංකය"
+  },
+  {
+    "id": 99,
+    "page": "footer",
+    "section": "info",
+    "key": "hotline",
+    "content_en": "[Phone — client to provide]",
+    "content_si": "[දුරකථන අංකය — සේවාදායකයා විසින් ලබා දිය යුතුය]"
+  },
+  {
+    "id": 100,
+    "page": "footer",
+    "section": "info",
+    "key": "help_text",
+    "content_en": "Need help?",
+    "content_si": "උදව් අවශ්‍යද?"
+  },
+  {
+    "id": 101,
+    "page": "footer",
+    "section": "info",
+    "key": "help_cta",
+    "content_en": "Contact Us",
+    "content_si": "අප අමතන්න"
+  },
+  {
+    "id": 105,
+    "page": "footer",
+    "section": "nav",
+    "key": "link_home",
+    "content_en": "Home",
+    "content_si": "මුල් පිටුව"
+  },
+  {
+    "id": 106,
+    "page": "footer",
+    "section": "nav",
+    "key": "link_how_it_works",
+    "content_en": "How It Works",
+    "content_si": "ක්‍රියාකරන ආකාරය"
+  },
+  {
+    "id": 107,
+    "page": "footer",
+    "section": "nav",
+    "key": "link_privacy_trust",
+    "content_en": "Privacy & Trust",
+    "content_si": "පෞද්ගලිකත්වය සහ විශ්වාසය"
+  },
+  {
+    "id": 108,
+    "page": "footer",
+    "section": "nav",
+    "key": "link_register",
+    "content_en": "Register",
+    "content_si": "ලියාපදිංචි වන්න"
+  },
+  {
+    "id": 109,
+    "page": "footer",
+    "section": "nav",
+    "key": "link_contact_faq",
+    "content_en": "Contact / FAQ",
+    "content_si": "අප අමතන්න / නිතර අසන ප්‍රශ්න"
+  },
+  {
+    "id": 110,
+    "page": "global",
+    "section": "districts",
+    "key": "ampara",
+    "content_en": "Ampara",
+    "content_si": "අම්පාර"
+  },
+  {
+    "id": 111,
+    "page": "global",
+    "section": "districts",
+    "key": "anuradhapura",
+    "content_en": "Anuradhapura",
+    "content_si": "අනුරාධපුර"
+  },
+  {
+    "id": 112,
+    "page": "global",
+    "section": "districts",
+    "key": "badulla",
+    "content_en": "Badulla",
+    "content_si": "බදුල්ල"
+  },
+  {
+    "id": 113,
+    "page": "global",
+    "section": "districts",
+    "key": "batticaloa",
+    "content_en": "Batticaloa",
+    "content_si": "මඩකලපුව"
+  },
+  {
+    "id": 114,
+    "page": "global",
+    "section": "districts",
+    "key": "colombo",
+    "content_en": "Colombo",
+    "content_si": "කොළඹ"
+  },
+  {
+    "id": 115,
+    "page": "global",
+    "section": "districts",
+    "key": "galle",
+    "content_en": "Galle",
+    "content_si": "ගාල්ල"
+  },
+  {
+    "id": 116,
+    "page": "global",
+    "section": "districts",
+    "key": "gampaha",
+    "content_en": "Gampaha",
+    "content_si": "ගම්පහ"
+  },
+  {
+    "id": 117,
+    "page": "global",
+    "section": "districts",
+    "key": "hambantota",
+    "content_en": "Hambantota",
+    "content_si": "හම්බන්තොට"
+  },
+  {
+    "id": 118,
+    "page": "global",
+    "section": "districts",
+    "key": "jaffna",
+    "content_en": "Jaffna",
+    "content_si": "යාපනය"
+  },
+  {
+    "id": 119,
+    "page": "global",
+    "section": "districts",
+    "key": "kalutara",
+    "content_en": "Kalutara",
+    "content_si": "කළුතර"
+  },
+  {
+    "id": 120,
+    "page": "global",
+    "section": "districts",
+    "key": "kandy",
+    "content_en": "Kandy",
+    "content_si": "මහනුවර"
+  },
+  {
+    "id": 121,
+    "page": "global",
+    "section": "districts",
+    "key": "kegalle",
+    "content_en": "Kegalle",
+    "content_si": "කෑගල්ල"
+  },
+  {
+    "id": 122,
+    "page": "global",
+    "section": "districts",
+    "key": "kilinochchi",
+    "content_en": "Kilinochchi",
+    "content_si": "කිලිනොච්චිය"
+  },
+  {
+    "id": 123,
+    "page": "global",
+    "section": "districts",
+    "key": "kurunegala",
+    "content_en": "Kurunegala",
+    "content_si": "කුරුණෑගල"
+  },
+  {
+    "id": 124,
+    "page": "global",
+    "section": "districts",
+    "key": "mannar",
+    "content_en": "Mannar",
+    "content_si": "මන්නාරම"
+  },
+  {
+    "id": 125,
+    "page": "global",
+    "section": "districts",
+    "key": "matale",
+    "content_en": "Matale",
+    "content_si": "මාතලේ"
+  },
+  {
+    "id": 126,
+    "page": "global",
+    "section": "districts",
+    "key": "matara",
+    "content_en": "Matara",
+    "content_si": "මාතර"
+  },
+  {
+    "id": 127,
+    "page": "global",
+    "section": "districts",
+    "key": "monaragala",
+    "content_en": "Monaragala",
+    "content_si": "මොනරාගල"
+  },
+  {
+    "id": 128,
+    "page": "global",
+    "section": "districts",
+    "key": "mullaitivu",
+    "content_en": "Mullaitivu",
+    "content_si": "මුලතිව්"
+  },
+  {
+    "id": 129,
+    "page": "global",
+    "section": "districts",
+    "key": "nuwara_eliya",
+    "content_en": "Nuwara Eliya",
+    "content_si": "නුවරඑළිය"
+  },
+  {
+    "id": 130,
+    "page": "global",
+    "section": "districts",
+    "key": "polonnaruwa",
+    "content_en": "Polonnaruwa",
+    "content_si": "පොළොන්නරුව"
+  },
+  {
+    "id": 131,
+    "page": "global",
+    "section": "districts",
+    "key": "puttalam",
+    "content_en": "Puttalam",
+    "content_si": "පුත්තලම"
+  },
+  {
+    "id": 132,
+    "page": "global",
+    "section": "districts",
+    "key": "ratnapura",
+    "content_en": "Ratnapura",
+    "content_si": "රත්නපුර"
+  },
+  {
+    "id": 133,
+    "page": "global",
+    "section": "districts",
+    "key": "trincomalee",
+    "content_en": "Trincomalee",
+    "content_si": "ත්‍රිකුණාමලය"
+  },
+  {
+    "id": 134,
+    "page": "global",
+    "section": "districts",
+    "key": "vavuniya",
+    "content_en": "Vavuniya",
+    "content_si": "වවුනියාව"
+  },
+  {
+    "id": 87,
+    "page": "header",
+    "section": "nav",
+    "key": "logo",
+    "content_en": "Magul Sakwala",
+    "content_si": "මඟුල් සක්වළ"
+  },
+  {
+    "id": 88,
+    "page": "header",
+    "section": "nav",
+    "key": "link_home",
+    "content_en": "Home",
+    "content_si": "මුල් පිටුව"
+  },
+  {
+    "id": 89,
+    "page": "header",
+    "section": "nav",
+    "key": "link_how_it_works",
+    "content_en": "How It Works",
+    "content_si": "ක්‍රියාකරන ආකාරය"
+  },
+  {
+    "id": 90,
+    "page": "header",
+    "section": "nav",
+    "key": "link_privacy_trust",
+    "content_en": "Privacy & Trust",
+    "content_si": "පෞද්ගලිකත්වය සහ විශ්වාසය"
+  },
+  {
+    "id": 91,
+    "page": "header",
+    "section": "nav",
+    "key": "link_contact_faq",
+    "content_en": "Contact / FAQ",
+    "content_si": "අප අමතන්න / නිතර අසන ප්‍රශ්න"
+  },
+  {
+    "id": 92,
+    "page": "header",
+    "section": "nav",
+    "key": "cta_register",
+    "content_en": "Register",
+    "content_si": "ලියාපදිංචි වන්න"
+  },
+  {
+    "id": 93,
+    "page": "header",
+    "section": "nav",
+    "key": "menu_open",
+    "content_en": "Open menu",
+    "content_si": "මෙනුව විවෘත කරන්න"
+  },
+  {
+    "id": 94,
+    "page": "header",
+    "section": "nav",
+    "key": "menu_close",
+    "content_en": "Close menu",
+    "content_si": "මෙනුව වසන්න"
+  },
+  {
+    "id": 135,
+    "page": "header",
+    "section": "nav",
+    "key": "link_sign_in",
+    "content_en": "Sign In",
+    "content_si": "පිවිසෙන්න"
+  },
+  {
+    "id": 136,
+    "page": "header",
+    "section": "nav",
+    "key": "cta_sign_out",
+    "content_en": "Sign Out",
+    "content_si": "පිටවන්න"
+  },
+  {
+    "id": 1,
+    "page": "home",
+    "section": "hero",
+    "key": "eyebrow_steps",
+    "content_en": "In 3 easy steps",
+    "content_si": "පහසු පියවර 3කින්"
+  },
+  {
+    "id": 2,
+    "page": "home",
+    "section": "hero",
+    "key": "steps_subtitle",
+    "content_en": "Register, get reviewed, meet with confidence.",
+    "content_si": "ලියාපදිංචි වන්න • සත්‍යාපනයට ලක් වන්න • විශ්වාසයෙන් හමුවන්න."
+  },
+  {
+    "id": 3,
+    "page": "home",
+    "section": "hero",
+    "key": "step_1",
+    "content_en": "Register",
+    "content_si": "ලියාපදිංචි වන්න"
+  },
+  {
+    "id": 4,
+    "page": "home",
+    "section": "hero",
+    "key": "step_2",
+    "content_en": "Private Review",
+    "content_si": "පෞද්ගලික සත්‍යාපනය"
+  },
+  {
+    "id": 5,
+    "page": "home",
+    "section": "hero",
+    "key": "step_3",
+    "content_en": "Introduction",
+    "content_si": "හඳුන්වාදීම"
+  },
+  {
+    "id": 6,
+    "page": "home",
+    "section": "hero",
+    "key": "headline",
+    "content_en": "Find a match built on trust, not browsing.",
+    "content_si": "සෙවීමෙන් නොව, විශ්වාසය මත ගොඩනැගුණු ගැළපෙන සහකරුවෙකු සොයා ගන්න."
+  },
+  {
+    "id": 7,
+    "page": "home",
+    "section": "hero",
+    "key": "subtext",
+    "content_en": "Magul Sakwala is a private, curated introduction service. Register once — our team handles the rest, quietly and carefully.",
+    "content_si": "මඟුල් සක්වළ යනු පෞද්ගලිකව තෝරාගත් මංගල හඳුන්වාදීමේ සේවාවකි. එක් වරක් ලියාපදිංචි වන්න — ඉතිරි සියල්ල අපගේ කණ්ඩායම නිහඬව හා සැලකිල්ලෙන් සිදු කරයි."
+  },
+  {
+    "id": 8,
+    "page": "home",
+    "section": "hero",
+    "key": "cta_register",
+    "content_en": "Register",
+    "content_si": "ලියාපදිංචි වන්න"
+  },
+  {
+    "id": 9,
+    "page": "home",
+    "section": "hero",
+    "key": "cta_start_now",
+    "content_en": "Start now",
+    "content_si": "දැන්ම ආරම්භ කරන්න"
+  },
+  {
+    "id": 21,
+    "page": "home",
+    "section": "members",
+    "key": "heading",
+    "content_en": "Members welcomed from every district",
+    "content_si": "ශ්‍රී ලංකාවේ සෑම දිස්ත්‍රික්කයකින්ම සාමාජිකයන් පිළිගනිමු"
+  },
+  {
+    "id": 22,
+    "page": "home",
+    "section": "teaser",
+    "key": "heading",
+    "content_en": "How it works",
+    "content_si": "ක්‍රියාකරන ආකාරය"
+  },
+  {
+    "id": 23,
+    "page": "home",
+    "section": "teaser",
+    "key": "body",
+    "content_en": "Register → private review → we contact both sides → mutual consent → introduction. No public browsing, ever.",
+    "content_si": "ලියාපදිංචිය → පෞද්ගලික සත්‍යාපනය → දෙපාර්ශ්වයම සම්බන්ධ කර ගැනීම → දෙපාර්ශ්වීය කැමැත්ත → හඳුන්වාදීම. මහජන සෙවීමක් කිසිදා නොමැත."
+  },
+  {
+    "id": 24,
+    "page": "home",
+    "section": "teaser",
+    "key": "cta",
+    "content_en": "See the full process",
+    "content_si": "සම්පූර්ණ ක්‍රියාවලිය බලන්න"
+  },
+  {
+    "id": 14,
+    "page": "home",
+    "section": "trust",
+    "key": "heading",
+    "content_en": "Why families trust us",
+    "content_si": "පවුල් අප කෙරෙහි විශ්වාසය තබන්නේ ඇයි?"
+  },
+  {
+    "id": 15,
+    "page": "home",
+    "section": "trust",
+    "key": "card_1_title",
+    "content_en": "Private",
+    "content_si": "පෞද්ගලිකත්වය"
+  },
+  {
+    "id": 16,
+    "page": "home",
+    "section": "trust",
+    "key": "card_1_body",
+    "content_en": "Your details are never shown publicly. Only our team reviews your profile.",
+    "content_si": "ඔබගේ තොරතුරු කිසිවිටෙකත් මහජනයාට පෙන්වනු නොලැබේ. ඔබගේ පැතිකඩ සමාලෝචනය කරන්නේ අපගේ කණ්ඩායම පමණි."
+  },
+  {
+    "id": 17,
+    "page": "home",
+    "section": "trust",
+    "key": "card_2_title",
+    "content_en": "Curated",
+    "content_si": "සැලකිල්ලෙන් තෝරාගත්"
+  },
+  {
+    "id": 18,
+    "page": "home",
+    "section": "trust",
+    "key": "card_2_body",
+    "content_en": "Every match is reviewed by hand — no algorithm swiping, no browsing strangers.",
+    "content_si": "සෑම ගැළපීමක්ම අතින් සමාලෝචනය කරනු ලැබේ. ඇල්ගොරිතම මත තීරණ නොගනී, නාඳුනන පුද්ගලයන් සෙවීමක්ද නොමැත."
+  },
+  {
+    "id": 19,
+    "page": "home",
+    "section": "trust",
+    "key": "card_3_title",
+    "content_en": "No Public Profiles",
+    "content_si": "මහජන පැතිකඩ නොමැත"
+  },
+  {
+    "id": 20,
+    "page": "home",
+    "section": "trust",
+    "key": "card_3_body",
+    "content_en": "Nothing you submit is searchable, listed, or visible to other members.",
+    "content_si": "ඔබ ලබාදෙන කිසිදු තොරතුරක් සෙවිය නොහැකි අතර, ලැයිස්තුගත කිරීමක් හෝ අනෙකුත් සාමාජිකයන්ට දෘශ්‍යමාන කිරීමක් සිදු නොවේ."
+  },
+  {
+    "id": 10,
+    "page": "home",
+    "section": "welcome",
+    "key": "greeting",
+    "content_en": "Welcome!...",
+    "content_si": "සාදරයෙන් පිළිගනිමු!"
+  },
+  {
+    "id": 11,
+    "page": "home",
+    "section": "welcome",
+    "key": "lede",
+    "content_en": "A private path to marriage, built on trust.",
+    "content_si": "විශ්වාසය මත ගොඩනැගුණු, විවාහය වෙත පෞද්ගලික මාවතක්."
+  },
+  {
+    "id": 12,
+    "page": "home",
+    "section": "welcome",
+    "key": "body",
+    "content_en": "Magul Sakwala is a private, curated introduction service for people across Sri Lanka and abroad who are serious about marriage. Every profile is reviewed personally by our team before anyone is introduced — no public browsing, no swiping, no strangers reaching out uninvited. Your photos, contact details, and personal information are only ever shared once both sides have agreed.",
+    "content_si": "මඟුල් සක්වළ යනු ශ්‍රී ලංකාවේ සහ විදේශයන්හි විවාහය පිළිබඳ අවංක බලාපොරොත්තුවක් ඇති පුද්ගලයන් සඳහා වන පෞද්ගලික මංගල හඳුන්වාදීමේ සේවාවකි. ඕනෑම හඳුන්වාදීමකට පෙර අපගේ කණ්ඩායම සෑම පැතිකඩක්ම පුද්ගලිකව සමාලෝචනය කරයි. මහජන සෙවීමක් නැත, ස්වයිප් කිරීමක් නැත, අනවශ්‍ය සම්බන්ධ කරගැනීම් නැත. ඔබගේ ඡායාරූප, සම්බන්ධතා තොරතුරු සහ පෞද්ගලික තොරතුරු දෙපාර්ශ්වයම එකඟ වූ පසුව පමණක් හුවමාරු කරනු ලැබේ."
+  },
+  {
+    "id": 13,
+    "page": "home",
+    "section": "welcome",
+    "key": "cta",
+    "content_en": "Start Your Journey",
+    "content_si": "ඔබගේ ගමන ආරම්භ කරන්න"
+  },
+  {
+    "id": 37,
+    "page": "how-it-works",
+    "section": "cta",
+    "key": "heading",
+    "content_en": "Ready to begin?",
+    "content_si": "ආරම්භ කිරීමට සූදානම්ද?"
+  },
+  {
+    "id": 38,
+    "page": "how-it-works",
+    "section": "cta",
+    "key": "cta_register",
+    "content_en": "Register",
+    "content_si": "ලියාපදිංචි වන්න"
+  },
+  {
+    "id": 25,
+    "page": "how-it-works",
+    "section": "intro",
+    "key": "heading",
+    "content_en": "How It Works",
+    "content_si": "ක්‍රියාකරන ආකාරය"
+  },
+  {
+    "id": 26,
+    "page": "how-it-works",
+    "section": "intro",
+    "key": "subtext",
+    "content_en": "A private, five-step process — no public browsing, no swiping, no pressure.",
+    "content_si": "පියවර පහකින් යුත් පෞද්ගලික ක්‍රියාවලියක් — මහජන සෙවීමක් නැත, ස්වයිප් කිරීමක් නැත, අනවශ්‍ය පීඩනයක් නැත."
+  },
+  {
+    "id": 27,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_1_title",
+    "content_en": "Register",
+    "content_si": "ලියාපදිංචි වන්න"
+  },
+  {
+    "id": 28,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_1_body",
+    "content_en": "Fill in your details privately — name, contact info, and the basics. Nothing is shown publicly.",
+    "content_si": "ඔබගේ නම, සම්බන්ධතා තොරතුරු සහ මූලික විස්තර පෞද්ගලිකව සම්පූර්ණ කරන්න. කිසිදු තොරතුරක් මහජනයාට දර්ශනය නොවේ."
+  },
+  {
+    "id": 29,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_2_title",
+    "content_en": "Private Review",
+    "content_si": "පෞද්ගලික සත්‍යාපනය"
+  },
+  {
+    "id": 30,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_2_body",
+    "content_en": "Our team reviews your profile carefully before anyone else sees it.",
+    "content_si": "ඔබගේ පැතිකඩ වෙනත් කිසිවෙකුට පෙන්වීමට පෙර අපගේ කණ්ඩායම එය ඉතා සැලකිල්ලෙන් සමාලෝචනය කරයි."
+  },
+  {
+    "id": 31,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_3_title",
+    "content_en": "We Contact Both Sides",
+    "content_si": "දෙපාර්ශ්වයම සම්බන්ධ කර ගනිමු"
+  },
+  {
+    "id": 32,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_3_body",
+    "content_en": "When we find a potential match, we reach out to you and the other side separately.",
+    "content_si": "සුදුසු ගැළපීමක් හමු වූ විට, අපි ඔබ හා අනෙක් පාර්ශ්වය වෙන වෙනම සම්බන්ධ කර ගනිමු."
+  },
+  {
+    "id": 33,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_4_title",
+    "content_en": "Mutual Consent",
+    "content_si": "දෙපාර්ශ්වීය කැමැත්ත"
+  },
+  {
+    "id": 34,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_4_body",
+    "content_en": "Nothing moves forward until both sides agree to be introduced.",
+    "content_si": "දෙපාර්ශ්වයම හඳුන්වාදීමට එකඟ වන තුරු කිසිදු පියවරක් ඉදිරියට ගනු නොලැබේ."
+  },
+  {
+    "id": 35,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_5_title",
+    "content_en": "Introduction",
+    "content_si": "හඳුන්වාදීම"
+  },
+  {
+    "id": 36,
+    "page": "how-it-works",
+    "section": "steps",
+    "key": "step_5_body",
+    "content_en": "Once both sides consent, we make the introduction and step back.",
+    "content_si": "දෙපාර්ශ්වයම එකඟ වූ පසු අපි හඳුන්වාදීම සිදු කරමින්, ඉන්පසු ඔබට ඉදිරි ගමන භාර දෙමු."
+  },
+  {
+    "id": 68,
+    "page": "privacy-trust",
+    "section": "intro",
+    "key": "heading",
+    "content_en": "Privacy & Trust",
+    "content_si": "පෞද්ගලිකත්වය සහ විශ්වාසය"
+  },
+  {
+    "id": 69,
+    "page": "privacy-trust",
+    "section": "intro",
+    "key": "subtext",
+    "content_en": "Everything about Magul Sakwala is built around discretion. Here's exactly how we protect your information.",
+    "content_si": "මඟුල් සක්වළේ සෑම සේවාවක්ම පෞද්ගලිකත්වය ආරක්ෂා කිරීම මූලික කරගෙන නිර්මාණය කර ඇත. ඔබගේ තොරතුරු අප ආරක්ෂා කරන ආකාරය මෙන්න."
+  },
+  {
+    "id": 70,
+    "page": "privacy-trust",
+    "section": "principles",
+    "key": "card_1_title",
+    "content_en": "No Public Browsing",
+    "content_si": "මහජන සෙවීමක් නොමැත"
+  },
+  {
+    "id": 71,
+    "page": "privacy-trust",
+    "section": "principles",
+    "key": "card_1_body",
+    "content_en": "There is no member directory, no public profiles, and no browsing. Your details are never listed or searchable by anyone — including other members.",
+    "content_si": "සාමාජික ලැයිස්තුවක්, මහජන පැතිකඩ හෝ සෙවීමේ පහසුකමක් නොමැත. ඔබගේ තොරතුරු වෙනත් සාමාජිකයන් ඇතුළුව කිසිවෙකුටත් සෙවීමට හෝ බැලීමට නොහැක."
+  },
+  {
+    "id": 72,
+    "page": "privacy-trust",
+    "section": "principles",
+    "key": "card_2_title",
+    "content_en": "Approval Before Contact",
+    "content_si": "සම්බන්ධ වීමට පෙර අනුමැතිය"
+  },
+  {
+    "id": 73,
+    "page": "privacy-trust",
+    "section": "principles",
+    "key": "card_2_body",
+    "content_en": "Nobody is contacted without our review first. When we find a potential match, we reach out to both sides separately and only proceed once both have agreed. See How It Works for the full process.",
+    "content_si": "අපගේ සමාලෝචනයකින් තොරව කිසිවෙකු සම්බන්ධ කර නොගනී. සුදුසු ගැළපීමක් හමු වූ විට අපි දෙපාර්ශ්වයම වෙන වෙනම සම්බන්ධ කරගෙන, දෙදෙනාම එකඟ වූ පසුව පමණක් ඉදිරියට යමු. සම්පූර්ණ ක්‍රියාවලිය සඳහා 'ක්‍රියාකරන ආකාරය' පිටුව බලන්න."
+  },
+  {
+    "id": 74,
+    "page": "privacy-trust",
+    "section": "principles",
+    "key": "card_3_title",
+    "content_en": "Data Handling",
+    "content_si": "දත්ත ආරක්ෂාව"
+  },
+  {
+    "id": 75,
+    "page": "privacy-trust",
+    "section": "principles",
+    "key": "card_3_body",
+    "content_en": "Your information is stored in a private database accessible only to our team. We never sell, share, or publish your details to third parties.",
+    "content_si": "ඔබගේ තොරතුරු අපගේ කණ්ඩායමට පමණක් ප්‍රවේශ විය හැකි පෞද්ගලික දත්ත ගබඩාවක සුරක්ෂිතව තබා ගනී. ඔබගේ තොරතුරු කිසිවිටෙකත් තෙවන පාර්ශ්වයකට විකිණීම, බෙදාගැනීම හෝ ප්‍රසිද්ධ කිරීම සිදු නොකරමු."
+  },
+  {
+    "id": 41,
+    "page": "register",
+    "section": "form",
+    "key": "label_name",
+    "content_en": "Name *",
+    "content_si": "සම්පූර්ණ නම *"
+  },
+  {
+    "id": 42,
+    "page": "register",
+    "section": "form",
+    "key": "label_email",
+    "content_en": "Email *",
+    "content_si": "විද්‍යුත් තැපෑල *"
+  },
+  {
+    "id": 43,
+    "page": "register",
+    "section": "form",
+    "key": "label_gender",
+    "content_en": "Gender *",
+    "content_si": "ස්ත්‍රී / පුරුෂ භාවය *"
+  },
+  {
+    "id": 44,
+    "page": "register",
+    "section": "form",
+    "key": "option_select",
+    "content_en": "Select",
+    "content_si": "තෝරන්න"
+  },
+  {
+    "id": 45,
+    "page": "register",
+    "section": "form",
+    "key": "option_female",
+    "content_en": "Female",
+    "content_si": "ස්ත්‍රී"
+  },
+  {
+    "id": 46,
+    "page": "register",
+    "section": "form",
+    "key": "option_male",
+    "content_en": "Male",
+    "content_si": "පුරුෂ"
+  },
+  {
+    "id": 47,
+    "page": "register",
+    "section": "form",
+    "key": "label_dob",
+    "content_en": "Date of Birth *",
+    "content_si": "උපන් දිනය *"
+  },
+  {
+    "id": 48,
+    "page": "register",
+    "section": "form",
+    "key": "label_district",
+    "content_en": "District *",
+    "content_si": "දිස්ත්‍රික්කය *"
+  },
+  {
+    "id": 49,
+    "page": "register",
+    "section": "form",
+    "key": "label_birth_time",
+    "content_en": "Birth Time (optional)",
+    "content_si": "උපන් වේලාව (අවශ්‍ය නොවේ)"
+  },
+  {
+    "id": 50,
+    "page": "register",
+    "section": "form",
+    "key": "label_photo",
+    "content_en": "Profile Photo (optional)",
+    "content_si": "පැතිකඩ ඡායාරූපය (අවශ්‍ය නොවේ)"
+  },
+  {
+    "id": 51,
+    "page": "register",
+    "section": "form",
+    "key": "btn_submit",
+    "content_en": "Submit",
+    "content_si": "ඉදිරිපත් කරන්න"
+  },
+  {
+    "id": 52,
+    "page": "register",
+    "section": "form",
+    "key": "btn_submitting",
+    "content_en": "Submitting…",
+    "content_si": "ඉදිරිපත් කරමින්..."
+  },
+  {
+    "id": 53,
+    "page": "register",
+    "section": "form",
+    "key": "err_generic",
+    "content_en": "Something went wrong. Please try again.",
+    "content_si": "යම් දෝෂයක් සිදුවිය. කරුණාකර නැවත උත්සාහ කරන්න."
+  },
+  {
+    "id": 54,
+    "page": "register",
+    "section": "form",
+    "key": "err_network",
+    "content_en": "Could not reach the server. Please try again.",
+    "content_si": "සේවාදායකය සමඟ සම්බන්ධ වීමට නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න."
+  },
+  {
+    "id": 55,
+    "page": "register",
+    "section": "form_errors",
+    "key": "name_required",
+    "content_en": "Name is required.",
+    "content_si": "නම ඇතුළත් කිරීම අනිවාර්ය වේ."
+  },
+  {
+    "id": 56,
+    "page": "register",
+    "section": "form_errors",
+    "key": "email_required",
+    "content_en": "Email is required.",
+    "content_si": "විද්‍යුත් තැපැල් ලිපිනය ඇතුළත් කිරීම අනිවාර්ය වේ."
+  },
+  {
+    "id": 57,
+    "page": "register",
+    "section": "form_errors",
+    "key": "email_invalid",
+    "content_en": "Enter a valid email address.",
+    "content_si": "වලංගු විද්‍යුත් තැපැල් ලිපිනයක් ඇතුළත් කරන්න."
+  },
+  {
+    "id": 58,
+    "page": "register",
+    "section": "form_errors",
+    "key": "gender_required",
+    "content_en": "Gender is required.",
+    "content_si": "ස්ත්‍රී / පුරුෂ භාවය තේරීම අනිවාර්ය වේ."
+  },
+  {
+    "id": 59,
+    "page": "register",
+    "section": "form_errors",
+    "key": "dob_required",
+    "content_en": "Date of birth is required.",
+    "content_si": "උපන් දිනය ඇතුළත් කිරීම අනිවාර්ය වේ."
+  },
+  {
+    "id": 60,
+    "page": "register",
+    "section": "form_errors",
+    "key": "dob_min_age",
+    "content_en": "You must be at least 18 years old.",
+    "content_si": "ඔබ අවම වශයෙන් වයස අවුරුදු 18ක් සම්පූර්ණ කර තිබිය යුතුය."
+  },
+  {
+    "id": 61,
+    "page": "register",
+    "section": "form_errors",
+    "key": "dob_invalid",
+    "content_en": "Enter a valid date of birth.",
+    "content_si": "වලංගු උපන් දිනයක් ඇතුළත් කරන්න."
+  },
+  {
+    "id": 62,
+    "page": "register",
+    "section": "form_errors",
+    "key": "district_required",
+    "content_en": "District is required.",
+    "content_si": "දිස්ත්‍රික්කය තේරීම අනිවාර්ය වේ."
+  },
+  {
+    "id": 39,
+    "page": "register",
+    "section": "intro",
+    "key": "heading",
+    "content_en": "Register",
+    "content_si": "ලියාපදිංචි වන්න"
+  },
+  {
+    "id": 40,
+    "page": "register",
+    "section": "intro",
+    "key": "subtext",
+    "content_en": "Private and confidential. Only our team reviews what you submit — nothing is published or searchable.",
+    "content_si": "සම්පූර්ණයෙන්ම පෞද්ගලික සහ රහසිගතයි. ඔබ ලබාදෙන තොරතුරු සමාලෝචනය කරන්නේ අපගේ කණ්ඩායම පමණි. කිසිවක් ප්‍රසිද්ධ නොකරන අතර සෙවියද නොහැක."
+  },
+  {
+    "id": 63,
+    "page": "thank-you",
+    "section": "main",
+    "key": "heading",
+    "content_en": "Thank you for registering",
+    "content_si": "ලියාපදිංචි වීම සඳහා ස්තුතියි"
+  },
+  {
+    "id": 64,
+    "page": "thank-you",
+    "section": "main",
+    "key": "body_1",
+    "content_en": "We've received your details privately. Nothing you submitted is public or searchable.",
+    "content_si": "ඔබගේ තොරතුරු පෞද්ගලිකව අප වෙත ලැබී ඇත. ඔබ ලබාදුන් කිසිදු තොරතුරක් ප්‍රසිද්ධ නොවන අතර සෙවියද නොහැක."
+  },
+  {
+    "id": 65,
+    "page": "thank-you",
+    "section": "main",
+    "key": "body_2",
+    "content_en": "Our team will review your profile by hand. If we find a potential match, we'll contact you directly before sharing anything with the other side.",
+    "content_si": "අපගේ කණ්ඩායම ඔබගේ පැතිකඩ පුද්ගලිකව සමාලෝචනය කරනු ඇත. සුදුසු ගැළපීමක් හමු වුවහොත්, අනෙක් පාර්ශ්වයට කිසිදු තොරතුරක් හෙළි කිරීමට පෙර අපි ඔබ සමඟ සෘජුව සම්බන්ධ වෙමු."
+  },
+  {
+    "id": 66,
+    "page": "thank-you",
+    "section": "main",
+    "key": "note",
+    "content_en": "No further action is needed from you right now.",
+    "content_si": "දැනට ඔබ විසින් තවත් කිසිදු ක්‍රියාමාර්ගයක් ගැනීම අවශ්‍ය නොවේ."
+  },
+  {
+    "id": 67,
+    "page": "thank-you",
+    "section": "main",
+    "key": "cta",
+    "content_en": "Back to Home",
+    "content_si": "මුල් පිටුවට යන්න"
+  }
+]

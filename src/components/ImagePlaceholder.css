@@ -1,0 +1,29 @@
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  background: var(--color-lavender);
+  border: 2px dashed var(--color-border);
+  color: var(--color-charcoal);
+  font-size: 14px;
+  text-align: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.image-placeholder-rect {
+  border-radius: var(--radius);
+}
+
+.image-placeholder-circle {
+  border-radius: 50%;
+}
+
+.image-placeholder-dims {
+  font-family: var(--mono);
+  font-size: 12px;
+  opacity: 0.7;
+}

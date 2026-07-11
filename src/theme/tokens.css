@@ -1,0 +1,66 @@
+:root {
+  /* colors — rose/berry pink family, warmed neutrals, antique gold accent
+     (nods to the gold thread used in Sri Lankan wedding ceremonies —
+     "magul poruwa") for restrained signature moments only. */
+  --color-primary: #c2185b;
+  --color-blush: #fdeaf1;
+  --color-blush-2: #fbd5e3;
+  --color-coral: #f0709a;
+  --color-gradient-start: #a6337b;
+  --color-gradient-end: #e91e8c;
+  --color-gold: #b08d3e;
+  --color-lavender: #f7eaf0;
+  --color-white: #ffffff;
+  --color-charcoal: #2b1620;
+  --color-text: var(--color-charcoal);
+  --color-border: #f0dce5;
+  --color-success: #2a7a4b;
+  --color-success-bg: #e9f7ee;
+  --shadow: rgba(var(--color-primary-rgb), 0.16) 0 10px 25px -8px;
+
+  /* RGB triplets for colors used with alpha transparency via rgba() —
+     CSS can't derive R/G/B channels from a hex custom property, so these
+     mirror the hex tokens above and must stay in sync with them. */
+  --color-primary-rgb: 194, 24, 91;
+  --color-coral-rgb: 240, 112, 154;
+  --color-gradient-start-rgb: 166, 51, 123;
+  --color-gradient-end-rgb: 233, 30, 140;
+  --color-gold-rgb: 176, 141, 62;
+  --color-charcoal-rgb: 43, 22, 32;
+
+  /* typography */
+  --sans: 'Inter', 'Noto Sans Sinhala', system-ui, Roboto, sans-serif;
+  --heading: 'Fraunces', 'Noto Sans Sinhala', 'Iowan Old Style', Georgia, serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  /* spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* radius */
+  --radius: 16px;
+
+  /* breakpoints — documentation only. CSS media queries cannot consume
+     custom properties in their condition, so every @media rule in the
+     project hardcodes these same numbers. Keep in sync with
+     src/theme/breakpoints.js, the JS-side source of truth. */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+
+  /* fixed header height — kept constant across the transparent/solid
+     scroll states so the sticky nav never shifts layout. Also consumed
+     by page-level content to offset for the fixed header. */
+  --header-height: 76px;
+
+  @media (min-width: 1024px) {
+    --header-height: 92px;
+  }
+}

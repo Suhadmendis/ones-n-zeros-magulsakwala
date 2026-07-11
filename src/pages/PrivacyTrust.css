@@ -1,0 +1,37 @@
+.pt-intro {
+  margin-top: calc(-1 * var(--header-height));
+  padding: calc(40px + var(--header-height)) 20px 24px;
+  text-align: center;
+  background: var(--color-lavender);
+
+  p {
+    max-width: 55ch;
+    margin: 12px auto 0;
+  }
+
+  @media (min-width: 768px) {
+    padding: calc(64px + var(--header-height)) 48px 32px;
+  }
+}
+
+.pt-wave {
+  background: var(--color-lavender);
+}
+
+.pt-principles {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    padding: 48px 48px 64px;
+  }
+}
+
+.pt-card h2 {
+  color: var(--color-primary);
+  font-size: 22px;
+}

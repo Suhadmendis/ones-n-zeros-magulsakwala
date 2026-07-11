@@ -1,0 +1,56 @@
+.signup-section {
+  padding: 32px 20px 48px;
+
+  @media (min-width: 768px) {
+    padding: 56px 48px 64px;
+  }
+}
+
+.signup-intro {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto 40px;
+
+  p {
+    margin-top: 8px;
+  }
+}
+
+.signup-card {
+  max-width: 440px;
+  margin: 0 auto;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+  color: var(--color-border);
+  font-size: 13px;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+  }
+}
+
+.google-button-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}

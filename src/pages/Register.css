@@ -1,0 +1,103 @@
+.register-section {
+  padding: 32px 20px 48px;
+
+  @media (min-width: 768px) {
+    padding: 56px 48px 64px;
+  }
+}
+
+.register-intro {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto 40px;
+
+  p {
+    margin-top: 8px;
+  }
+}
+
+.register-layout {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: flex-start;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.register-card {
+  flex: 1.4;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.register-side {
+  flex: 1;
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    .field {
+      flex: 1;
+    }
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-charcoal);
+
+  input,
+  select {
+    font: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    min-height: 44px;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-white);
+    color: var(--color-charcoal);
+
+    &:focus {
+      outline: 2px solid var(--color-coral);
+      outline-offset: 1px;
+    }
+  }
+}
+
+.field-error {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.field-success {
+  color: var(--color-success);
+  font-weight: 500;
+  font-size: 14px;
+  background: var(--color-success-bg);
+  border-radius: 8px;
+  padding: 10px 14px;
+}

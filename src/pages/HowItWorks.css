@@ -1,0 +1,56 @@
+.hiw-intro {
+  margin-top: calc(-1 * var(--header-height));
+  padding: calc(40px + var(--header-height)) 20px 24px;
+  text-align: center;
+  background: var(--color-blush);
+
+  p {
+    max-width: 50ch;
+    margin: 12px auto 0;
+  }
+
+  @media (min-width: 768px) {
+    padding: calc(64px + var(--header-height)) 48px 32px;
+  }
+}
+
+.hiw-wave {
+  background: var(--color-blush);
+}
+
+.hiw-steps {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (min-width: 768px) {
+    padding: 48px 48px 64px;
+  }
+}
+
+.hiw-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+
+  h3 {
+    margin: 4px 0 8px;
+  }
+}
+
+.hiw-cta {
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--color-lavender);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    padding: 56px 48px;
+  }
+}
