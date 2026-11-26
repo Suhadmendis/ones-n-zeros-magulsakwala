@@ -6,57 +6,19 @@ Method: Two agents walked through every page, form, and API flow as a first-time
 
 ---
 
-## 🔴 Critical — Blocks Users Completely
-
-**[No "Forgot Password" / Password Reset Flow]**  
-No `/api/password-reset.php` and no forgot-password page exist. Users who forget their password are permanently stuck. No recovery path at all.
-
----
-
-## 🟠 High — Confusing or Broken Experience
-
-**[Register vs SignUp Journey Is Unclear]**  
-Two separate flows exist: `/register` (matrimonial profile) and `/sign-up` (create login account). The home page pushes users to `/register` with every CTA, but users need an account too. The site never tells users they must do both, in what order, or why. Users who submit a registration form without an account have no way to log in later and view or manage it. Backend also does not link registrations to user accounts.
-
-**[No Account Dashboard / Profile Page]**  
-After signing in, the header shows the user's name and a sign-out button — but there is no profile page, no dashboard, no way to view or edit a submitted proposal. Signed-in users hit a dead end.
-
-**[Google OAuth Silent Failure — Missing Client ID]**  
-If `VITE_GOOGLE_CLIENT_ID` env var is not set, an empty string is passed to GoogleOAuthProvider. The Google Sign-In button silently fails to initialize. Users see either nothing or "An error occurred" with no explanation.
-
----
-
 ## 🟡 Medium — Friction, Missing Polish, Silent Failures
 
-**[No Loading Indicator During Form Submission]**  
-When any form is submitting, the submit button disables but shows no spinner or text change. On slow connections (1–2s), users see a frozen form with no feedback. Many will tap/click again thinking it didn't register.
-
 **[Password Strength Mismatch Between Frontend and Backend]**  
-Frontend enforces letters + digits (enforced via `requireStrong: true`). Backend signup.php only checks minimum 8 characters. A user who bypasses the frontend can set a weak password the site claims shouldn't be possible.
+Frontend enforces letters + digits (enforced via `requireStrong: true`). Backend signup.php only checks minimum 8 characters. A user who bypasses the frontend can set a weak password the site claims shouldn't be possible.  
+> *Note: backend now enforces complexity — but frontend `validation.js` `requireStrong` logic should be verified to match exactly.*
 
 **[Frontend/Backend Validation Inconsistency — Name & Email]**  
-Frontend validates name min 2 chars, max 80. Backend only checks non-empty. Frontend uses strict email regex with TLD check; backend uses PHP's `filter_var`. These can produce different accept/reject results for the same input.
-
-**[No 404 Page]**  
-All unknown routes redirect silently to `/`. Users who land on a broken or old link get redirected to home with zero explanation. They don't know the page doesn't exist.
+Frontend validates name min 2 chars, max 80. Backend only checks non-empty. Frontend uses strict email regex with TLD check; backend uses PHP's `filter_var`. These can produce different accept/reject results for the same input.  
+> *Note: backend now enforces name min 2 chars — email regex parity still unverified.*
 
 **[Google Account Auto-Merge With No Warning]**  
-If a user has an email/password account and later signs in with Google using the same email, `google_auth.php` silently merges the accounts. No confirmation, no notification. User may be confused why their Google login "just worked" on an account they made manually.
-
-**[Logout May Fail Silently]**  
-`logout.php` result is not checked. If the backend session destroy fails (network error, etc.), the frontend still clears local state. User thinks they're logged out but their backend session persists.
-
-**[Password Strength Hint Is Static — No Real-Time Feedback]**  
-SignUp form shows "At least 8 characters, mix letters and numbers" as static hint text. No indicator shows whether the current password input meets the criteria. User only finds out on submit.
-
-**[Date Picker "Today" Button Silent Failure]**  
-If today falls outside the date picker's min/max range, clicking "Today" does nothing. No visual feedback, no disabled state, no tooltip. Looks like a broken button.
-
-**[Birth Time Accepts Invalid Times]**  
-Backend regex validates format HH:MM but not whether the time is real (e.g., 25:70 passes). Frontend TimePicker prevents this UI-side but no backend guard exists.
-
-**[No "Back to Edit" From ThankYou Page]**  
-ThankYou page has no link back to fix a mistake. If a user spots an error after submitting, they have no path to edit their registration.
+If a user has an email/password account and later signs in with Google using the same email, `google_auth.php` silently merges the accounts. No confirmation, no notification. User may be confused why their Google login "just worked" on an account they made manually.  
+> *Note: backend now returns `merged: true` and SignIn shows a banner — but SignUp Google path does not yet handle merge notification.*
 
 **[Register Form Has No Step Progress Indicator]**  
 The registration form is long with no visual progress, no section headings, no "step 2 of 4" indicator. Users can't tell how much is left.
@@ -65,11 +27,8 @@ The registration form is long with no visual progress, no section headings, no "
 
 ## 🔵 Low — Minor UX Gaps
 
-**[No "Remove Photo" Confirmation]**  
-FileInput "Remove" button (red) deletes the selected photo with no confirmation prompt. Easy to accidentally remove an uploaded photo.
-
 **[Google OAuth Error Message Too Technical]**  
-On Google auth failure, users see the raw error key `google_verify_failed` — not a human-readable message.
+On Google auth failure in SignUp, users still see the raw error key `google_verify_failed` — not a human-readable message. (SignIn is fixed; SignUp `onError` still uses old key.)
 
 ---
 
@@ -77,11 +36,9 @@ On Google auth failure, users see the raw error key `google_verify_failed` — n
 
 | Severity | Count |
 |---|---|
-| 🔴 Critical | 1 |
-| 🟠 High | 3 |
-| 🟡 Medium | 11 |
-| 🔵 Low | 2 |
-| **Total** | **17** |
+| 🟡 Medium | 4 |
+| 🔵 Low | 1 |
+| **Total** | **5** |
 
 ---
 
@@ -98,3 +55,20 @@ On Google auth failure, users see the raw error key `google_verify_failed` — n
 | Birth Time Field Has No Explanation | `Register.jsx` — hint text added |
 | Email Field in Registration Marked Optional Silently | `Register.jsx` — "(optional)" label + hint |
 | Phone Number Format Not Explained | `Register.jsx` — format example hint added |
+| No "Forgot Password" / Password Reset Flow | `api/password-reset.php` (new) + `ForgotPassword.jsx` (new) |
+| No Account Dashboard / Profile Page | `Dashboard.jsx` + `Dashboard.css` (new), header user name links to `/dashboard` |
+| No 404 Page | `NotFound.jsx` (new), `path="*"` now renders it |
+| Register vs SignUp Journey Is Unclear | `Register.jsx` account banner + `ThankYou.jsx` sign-up CTA |
+| Google OAuth Silent Failure — Missing Client ID | `main.jsx` — console.warn guard added |
+| No Loading Indicator During Form Submission | All forms — submit button text fallbacks added |
+| Google OAuth Error Message Too Technical (SignIn) | `SignIn.jsx` — `GOOGLE_ERROR_FALLBACKS` map + humanized message |
+| Forgot Password Link Missing on SignIn | `SignIn.jsx` — link added above submit |
+| Password Strength Hint Is Static | `SignUp.jsx` — real-time weak/medium/strong bar |
+| Date Picker "Today" Button Silent Failure | `DatePicker.jsx` — disabled + dimmed when out of range |
+| No "Back to Edit" / Account CTA From ThankYou | `ThankYou.jsx` — sign-up CTA block added |
+| Birth Time Accepts Invalid Times | `api/register.php` — hours ≤23, mins ≤59 guard |
+| Logout May Fail Silently | `api/logout.php` + `AuthProvider.jsx` — failure logged |
+| Password Strength Backend Not Enforced | `api/signup.php` — letter+digit complexity required |
+| Name Min-Length Not Enforced on Backend | `api/signup.php` — min 2 chars enforced |
+| No "Remove Photo" Confirmation | `FileInput.jsx` — `window.confirm` before clear |
+| Google Account Merge — No Notification | `api/google_auth.php` returns `merged: true`, `SignIn.jsx` shows banner |
