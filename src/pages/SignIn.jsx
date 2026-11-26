@@ -1,5 +1,5 @@
 import { useId, useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import { GoogleLogin } from '@react-oauth/google'
 import Button from '../components/Button'
 import Card from '../components/Card'
@@ -13,6 +13,8 @@ const initialForm = { email: '', password: '' }
 
 function SignIn() {
   const navigate = useNavigate()
+  const location = useLocation()
+  const justSignedUp = Boolean(location.state?.justSignedUp)
   const { t, locale } = useContent()
   const { signIn, signInWithGoogle } = useAuth()
   const [form, setForm] = useState(initialForm)
@@ -73,6 +75,9 @@ function SignIn() {
       </div>
 
       <Card className="signup-card">
+        {justSignedUp && (
+          <p className="auth-success">Account created! Sign in to continue.</p>
+        )}
         <form onSubmit={handleSubmit} noValidate>
           <label className="field" htmlFor={fid('email')}>
             <span>{t('auth', 'signin', 'label_email')}</span>

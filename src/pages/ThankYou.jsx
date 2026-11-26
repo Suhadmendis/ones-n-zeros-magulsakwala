@@ -8,6 +8,7 @@ import './ThankYou.css'
 function ThankYou() {
   const location = useLocation()
   const submitted = Boolean(location.state?.submitted)
+  const registrationId = location.state?.id ?? null
   const { t } = useContent()
 
   if (!submitted) {
@@ -23,6 +24,9 @@ function ThankYou() {
           <p>{t('thank-you', 'main', 'body_1')}</p>
           <p>{t('thank-you', 'main', 'body_2')}</p>
           <p className="ty-note">{t('thank-you', 'main', 'note')}</p>
+          {registrationId && (
+            <p className="ty-ref">Your reference number: <strong>#{registrationId}</strong></p>
+          )}
           <Button to="/">{t('thank-you', 'main', 'cta')}</Button>
         </Card>
       </section>

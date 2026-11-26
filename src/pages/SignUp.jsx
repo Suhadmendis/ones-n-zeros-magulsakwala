@@ -48,7 +48,7 @@ function SignUp() {
       return
     }
 
-    navigate('/')
+    navigate('/sign-in', { state: { justSignedUp: true } })
   }
 
   const handleGoogleSuccess = async (credentialResponse) => {

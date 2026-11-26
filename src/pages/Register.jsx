@@ -78,7 +78,7 @@ function Register() {
       }
 
       setSubmitting(false)
-      navigate('/thank-you', { state: { submitted: true } })
+      navigate('/thank-you', { state: { submitted: true, id: data.id ?? null } })
     } catch {
       setErrors({ form: 'err_network' })
       setSubmitting(false)
@@ -125,7 +125,7 @@ function Register() {
             </label>
 
             <label className="field" htmlFor={fid('email')}>
-              <span>{t('register', 'form', 'label_email')}</span>
+              <span>{t('register', 'form', 'label_email')} <span className="field-optional">(optional)</span></span>
               <input
                 id={fid('email')}
                 type="email"
@@ -137,8 +137,9 @@ function Register() {
                 spellCheck={false}
                 maxLength={254}
                 aria-invalid={!!errors.email}
-                aria-describedby={errors.email ? fid('email-err') : undefined}
+                aria-describedby={errors.email ? fid('email-err') : fid('email-hint')}
               />
+              <span id={fid('email-hint')} className="field-hint">For receiving updates — we will not share your email.</span>
               {errors.email && <span id={fid('email-err')} className="field-error">{errorText(errors.email)}</span>}
             </label>
 
@@ -153,8 +154,9 @@ function Register() {
                 inputMode="tel"
                 maxLength={20}
                 aria-invalid={!!errors.phone}
-                aria-describedby={errors.phone ? fid('phone-err') : undefined}
+                aria-describedby={errors.phone ? fid('phone-err') : fid('phone-hint')}
               />
+              <span id={fid('phone-hint')} className="field-hint">e.g. 0771234567 or +94771234567</span>
               {errors.phone && <span id={fid('phone-err')} className="field-error">{errorText(errors.phone)}</span>}
             </label>
 
@@ -212,6 +214,7 @@ function Register() {
                 onChange={setField('birthTime')}
                 invalid={!!errors.birthTime}
               />
+              <span className="field-hint">Used for astrological compatibility matching. Check your birth certificate if unsure.</span>
               {errors.birthTime && <span className="field-error">{errorText(errors.birthTime)}</span>}
             </label>
 

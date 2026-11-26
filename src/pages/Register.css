@@ -86,6 +86,12 @@
   font-size: 12px;
 }
 
+.field-optional {
+  font-size: 12px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--color-charcoal) 50%, transparent);
+}
+
 .field-success {
   color: var(--color-success);
   font-weight: 500;

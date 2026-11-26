@@ -12,7 +12,11 @@ const SignUp = lazy(() => import('./pages/SignUp'))
 const SignIn = lazy(() => import('./pages/SignIn'))
 
 function RouteFallback() {
-  return <div style={{ minHeight: '60vh' }} aria-busy="true" />
+  return (
+    <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-busy="true" aria-label="Loading">
+      <div style={{ width: 36, height: 36, border: '3px solid var(--color-blush-2)', borderTopColor: 'var(--color-primary)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
+    </div>
+  )
 }
 
 function App() {
