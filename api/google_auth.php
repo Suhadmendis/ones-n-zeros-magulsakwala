@@ -45,6 +45,8 @@ try {
     $stmt->execute([':google_id' => $googleId]);
     $user = $stmt->fetch();
 
+    $merged = false;
+
     if ($user) {
         $userId = (int) $user['id'];
     } else {
@@ -62,6 +64,7 @@ try {
                 ':avatar_url' => $avatarUrl,
                 ':id' => $userId,
             ]);
+            $merged = true;
         } else {
             $insert = $pdo->prepare(
                 'INSERT INTO users (name, email, google_id, avatar_url) VALUES (:name, :email, :google_id, :avatar_url)'
@@ -77,7 +80,11 @@ try {
     }
 
     $_SESSION['user_id'] = $userId;
-    json_response(['user' => current_user($pdo)]);
+    $response = ['user' => current_user($pdo)];
+    if ($merged) {
+        $response['merged'] = true;
+    }
+    json_response($response);
 } catch (Throwable $e) {
     error_log('google auth failed: ' . $e->getMessage());
     json_response(['errors' => ['form' => 'err_generic']], 500);
