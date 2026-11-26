@@ -8,6 +8,10 @@ import { ContentProvider } from './hooks/ContentProvider.jsx'
 import { AuthProvider } from './hooks/AuthProvider.jsx'
 import { reportVitals } from './seo/reportVitals.js'
 
+if (!import.meta.env.VITE_GOOGLE_CLIENT_ID) {
+  console.warn('[Magul Sakwala] VITE_GOOGLE_CLIENT_ID is not set — Google Sign-In will not work.')
+}
+
 reportVitals()
 
 createRoot(document.getElementById('root')).render(
