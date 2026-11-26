@@ -1,6 +1,8 @@
 import Badge from '../components/Badge'
 import Button from '../components/Button'
 import WaveDivider from '../components/WaveDivider'
+import Seo from '../components/Seo'
+import { breadcrumbSchema } from '../seo/schema.js'
 import { useContent } from '../hooks/useContent.js'
 import './HowItWorks.css'
 
@@ -15,6 +17,17 @@ function HowItWorks() {
 
   return (
     <>
+      <Seo
+        path="/how-it-works"
+        title="How Magul Sakwala Works"
+        description="Step-by-step guide to our private Sri Lankan matchmaking process: register, private review, family contact, mutual consent, introduction."
+        jsonLd={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'How It Works', path: '/how-it-works' },
+          ]),
+        ]}
+      />
       <section className="hiw-intro">
         <h1>{t('how-it-works', 'intro', 'heading')}</h1>
         <p>{t('how-it-works', 'intro', 'subtext')}</p>

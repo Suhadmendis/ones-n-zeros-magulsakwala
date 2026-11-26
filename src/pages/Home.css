@@ -39,10 +39,15 @@
 
 .home-hero-card {
   max-width: 420px;
+  width: 100%;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(6px);
   border-radius: var(--radius);
-  padding: 28px 28px 32px;
+  padding: 24px 20px 28px;
+
+  @media (min-width: 480px) {
+    padding: 28px 28px 32px;
+  }
   box-shadow: var(--shadow);
   color: var(--color-charcoal);
   display: flex;
@@ -65,13 +70,19 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px 32px;
+  gap: 16px 32px;
+  width: 100%;
   max-width: 720px;
   background: var(--color-white);
   border-radius: var(--radius);
-  padding: 20px 28px;
+  padding: 16px 20px;
   box-shadow: var(--shadow);
   color: var(--color-charcoal);
+
+  @media (min-width: 480px) {
+    padding: 20px 28px;
+    gap: 20px 32px;
+  }
 }
 
 .home-hero-steps-label {
@@ -127,6 +138,12 @@
 
 .home-hero-steps-cta {
   margin-left: auto;
+
+  @media (max-width: 479px) {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .home-welcome {
@@ -160,7 +177,17 @@
 
 .home-welcome-greeting {
   margin: 0;
-  font-size: clamp(30px, 24px + 2.4vw, 46px);
+  font-size: clamp(26px, 20px + 2.6vw, 46px);
+}
+
+html[lang="si"] .home-welcome-greeting {
+  font-size: clamp(20px, 16px + 1.6vw, 32px);
+  line-height: 140%;
+}
+
+html[lang="si"] .home-welcome-lede {
+  font-size: clamp(17px, 15px + 0.5vw, 22px);
+  line-height: 145%;
 }
 
 .home-welcome-lede {
@@ -216,8 +243,12 @@
 .home-trust-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1fr;
   text-align: left;
+
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 
   h3 {
     margin: 0 0 8px;
@@ -247,8 +278,20 @@
 
   > * {
     width: 96px;
+    height: 96px;
     border: 3px solid var(--color-white);
     box-shadow: var(--shadow);
+  }
+}
+
+.home-members-photo {
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+
+  @media (min-width: 768px) {
+    width: 140px !important;
+    height: 140px !important;
   }
 }
 

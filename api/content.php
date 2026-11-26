@@ -15,6 +15,7 @@ try {
         ];
     }
 
+    header('Cache-Control: public, max-age=300, stale-while-revalidate=600');
     echo json_encode($content);
 } catch (Throwable $e) {
     error_log('content fetch failed: ' . $e->getMessage());

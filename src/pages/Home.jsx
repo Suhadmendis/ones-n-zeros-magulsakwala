@@ -1,11 +1,18 @@
 import Badge from '../components/Badge'
 import Button from '../components/Button'
 import Card from '../components/Card'
-import ImagePlaceholder from '../components/ImagePlaceholder'
-import heroImage from '../assets/home/anangayalk-home-banner.jpg'
+import Seo from '../components/Seo'
+import { serviceSchema } from '../seo/schema.js'
+import heroImage from '../assets/home/anangayalk-home-banner.png'
 import welcomeIllustration from '../assets/home/illutration.png'
+import member2 from '../assets/home/members/c2.png'
+import member3 from '../assets/home/members/c3.png'
+import member5 from '../assets/home/members/c5.png'
+import member6 from '../assets/home/members/c6.png'
 import { useContent } from '../hooks/useContent.js'
 import './Home.css'
+
+const memberPhotos = [member6, member2, member3, member5]
 
 function Home() {
   const { t } = useContent()
@@ -22,6 +29,11 @@ function Home() {
 
   return (
     <>
+      <Seo
+        path="/"
+        description="Trusted Sri Lankan matchmaking service — private, curated marriage proposals for Sinhala, Tamil and English-speaking families across Sri Lanka and the diaspora."
+        jsonLd={[serviceSchema()]}
+      />
       <section className="home-hero">
         <img
           className="home-hero-bg"
@@ -30,6 +42,8 @@ function Home() {
           height={1080}
           alt=""
           aria-hidden="true"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="home-hero-scrim" aria-hidden="true" />
 
@@ -71,6 +85,8 @@ function Home() {
             width={654}
             height={630}
             alt="Illustration of a bride and groom celebrating, surrounded by hearts"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>
@@ -90,13 +106,16 @@ function Home() {
       <section className="home-members">
         <h2>{t('home', 'members', 'heading')}</h2>
         <div className="home-members-row">
-          {Array.from({ length: 5 }, (_, i) => (
-            <ImagePlaceholder
+          {memberPhotos.map((src, i) => (
+            <img
               key={i}
+              src={src}
               width={200}
               height={200}
-              shape="circle"
-              alt={`member/testimonial thumbnail ${i + 1} — client to provide`}
+              alt=""
+              className="home-members-photo"
+              loading="lazy"
+              decoding="async"
             />
           ))}
         </div>

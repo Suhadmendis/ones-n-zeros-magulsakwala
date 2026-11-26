@@ -12,10 +12,27 @@
   text-align: center;
   padding: 12px;
   box-sizing: border-box;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.image-placeholder-circle > span {
+  font-size: 11px;
+  line-height: 1.2;
+  padding: 0 4px;
+}
+
+.image-placeholder-circle .image-placeholder-dims {
+  display: none;
 }
 
 .image-placeholder-rect {
   border-radius: var(--radius);
+  max-height: 320px;
+
+  @media (min-width: 768px) {
+    max-height: none;
+  }
 }
 
 .image-placeholder-circle {

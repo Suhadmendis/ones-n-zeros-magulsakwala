@@ -32,8 +32,11 @@
   align-items: center;
   gap: 12px;
   margin: 22px 0;
-  color: var(--color-border);
-  font-size: 13px;
+  color: color-mix(in srgb, var(--color-charcoal) 55%, transparent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 
   &::before,
   &::after {
@@ -47,10 +50,34 @@
 .google-button-wrap {
   display: flex;
   justify-content: center;
+
+  > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  iframe {
+    color-scheme: light;
+  }
 }
 
 .auth-switch {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
   font-size: 14px;
+  color: color-mix(in srgb, var(--color-charcoal) 75%, transparent);
+
+  a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

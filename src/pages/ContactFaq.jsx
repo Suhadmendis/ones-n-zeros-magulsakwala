@@ -1,5 +1,7 @@
 import Button from '../components/Button'
 import Card from '../components/Card'
+import Seo from '../components/Seo'
+import { breadcrumbSchema, faqSchema } from '../seo/schema.js'
 import { useContent } from '../hooks/useContent.js'
 import './ContactFaq.css'
 
@@ -16,6 +18,18 @@ function ContactFaq() {
 
   return (
     <>
+      <Seo
+        path="/contact-faq"
+        title="Contact & FAQ"
+        description="Contact Magul Sakwala and read answers to common questions about our Sri Lankan marriage-proposal service."
+        jsonLd={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Contact & FAQ', path: '/contact-faq' },
+          ]),
+          faqSchema(faqs.map((f) => ({ question: f.q, answer: f.a }))),
+        ]}
+      />
       <section className="cf-intro">
         <h1>{t('contact-faq', 'intro', 'heading')}</h1>
         <p>{t('contact-faq', 'intro', 'subtext')}</p>

@@ -28,15 +28,21 @@ function ensure_schema(PDO $pdo): void {
         CREATE TABLE IF NOT EXISTS registrations (
             id INT AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(255) NOT NULL,
-            email VARCHAR(255) NOT NULL,
+            email VARCHAR(255) NULL,
+            phone VARCHAR(30) NOT NULL,
             gender VARCHAR(20) NOT NULL,
             dob DATE NOT NULL,
             district VARCHAR(100) NOT NULL,
-            birth_time TIME NULL,
-            photo_path VARCHAR(255) NULL,
+            birth_time TIME NOT NULL,
+            photo_path VARCHAR(255) NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     ");
+
+    $cols = $pdo->query("SHOW COLUMNS FROM registrations")->fetchAll(PDO::FETCH_COLUMN);
+    if (!in_array('phone', $cols, true)) {
+        $pdo->exec("ALTER TABLE registrations ADD COLUMN phone VARCHAR(30) NOT NULL DEFAULT '' AFTER email");
+    }
 
     $pdo->exec("
         CREATE TABLE IF NOT EXISTS users (
@@ -48,6 +54,20 @@ function ensure_schema(PDO $pdo): void {
             avatar_url VARCHAR(500) NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+    ");
+
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS web_vitals (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            metric VARCHAR(10) NOT NULL,
+            value DOUBLE NOT NULL,
+            rating VARCHAR(20) NULL,
+            page VARCHAR(255) NOT NULL,
+            navigation_type VARCHAR(30) NULL,
+            user_agent VARCHAR(500) NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            INDEX idx_metric_page (metric, page)
+        )
     ");
 
     $pdo->exec("

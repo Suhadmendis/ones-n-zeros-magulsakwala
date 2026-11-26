@@ -14,6 +14,11 @@
   transition: background-color 280ms ease, box-shadow 280ms ease;
 
   @media (min-width: 1024px) {
+    gap: 20px;
+    padding: 20px 24px;
+  }
+
+  @media (min-width: 1280px) {
     gap: 48px;
     padding: 20px 48px;
   }
@@ -32,6 +37,10 @@
   @media (min-width: 1024px) {
     flex: 1;
     justify-content: center;
+    gap: 20px;
+  }
+
+  @media (min-width: 1280px) {
     gap: 48px;
   }
 }
@@ -43,6 +52,7 @@
   letter-spacing: -0.2px;
   color: var(--color-white);
   text-decoration: none;
+  white-space: nowrap;
   transition: color 280ms ease;
 
   .site-header.is-scrolled & {
@@ -56,15 +66,16 @@
   @media (min-width: 1024px) {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
 
     a {
       color: var(--color-white);
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 700;
-      font-size: 15px;
-      letter-spacing: 0.8px;
+      font-size: 13px;
+      letter-spacing: 0.6px;
+      white-space: nowrap;
       transition: color 280ms ease;
 
       &:hover,
@@ -80,6 +91,15 @@
           color: var(--color-primary);
         }
       }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    gap: 32px;
+
+    a {
+      font-size: 15px;
+      letter-spacing: 0.8px;
     }
   }
 }
@@ -254,6 +274,15 @@
     }
   }
 
+  a.btn {
+    color: var(--color-white);
+
+    &:hover {
+      color: var(--color-white);
+      background: transparent;
+    }
+  }
+
   .btn {
     margin-top: 8px;
   }
@@ -295,5 +324,82 @@
   .site-nav a,
   .menu-toggle span {
     transition: none;
+  }
+}
+
+/* Sinhala header — glyphs run wider than Latin at same em size, and
+   Sinhala nav labels expand ~20-30%. Tighten spacing/fonts at 1024-1279
+   to keep the row single-line before the 1280 breakpoint restores defaults. */
+html[lang="si"] .site-header {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    gap: 12px;
+    padding: 16px 20px;
+  }
+}
+
+html[lang="si"] .site-header__center {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    gap: 12px;
+  }
+}
+
+html[lang="si"] .site-nav {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    gap: 14px;
+
+    a {
+      font-size: 12px;
+      letter-spacing: 0.4px;
+      text-transform: none;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    gap: 20px;
+
+    a {
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      text-transform: none;
+    }
+  }
+}
+
+html[lang="si"] .site-header__center {
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    gap: 20px;
+  }
+}
+
+html[lang="si"] .site-header {
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    gap: 20px;
+    padding: 20px 24px;
+  }
+}
+
+html[lang="si"] .site-header__signin {
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    font-size: 13px;
+  }
+}
+
+html[lang="si"] .site-header__signin {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    display: none;
+  }
+}
+
+/* Move CTA next to nav in Sinhala at 1024-1279 so it doesn't need margin-left:auto — Sign In is hidden here, CTA takes its place */
+html[lang="si"] .site-header__cta {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    margin-left: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    padding: 12px 22px;
+    font-size: 14px;
   }
 }

@@ -1,5 +1,7 @@
 import Card from '../components/Card'
 import WaveDivider from '../components/WaveDivider'
+import Seo from '../components/Seo'
+import { breadcrumbSchema } from '../seo/schema.js'
 import { useContent } from '../hooks/useContent.js'
 import './PrivacyTrust.css'
 
@@ -14,6 +16,17 @@ function PrivacyTrust() {
 
   return (
     <>
+      <Seo
+        path="/privacy-trust"
+        title="Privacy & Trust"
+        description="How Magul Sakwala protects your marriage proposal data — private profiles, family-only sharing, approval before contact."
+        jsonLd={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Privacy & Trust', path: '/privacy-trust' },
+          ]),
+        ]}
+      />
       <section className="pt-intro">
         <h1>{t('privacy-trust', 'intro', 'heading')}</h1>
         <p>{t('privacy-trust', 'intro', 'subtext')}</p>

@@ -1,2 +1,8 @@
 User-agent: *
+Allow: /
+Disallow: /api/
 Disallow: /thank-you
+Disallow: /sign-in
+Disallow: /sign-up
+
+Sitemap: https://magulsakwala.lk/sitemap.xml
