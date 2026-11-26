@@ -23,19 +23,15 @@ jobs:
         run: npm run build
 
       - name: Copy API into dist
-        run: cp -r api dist/api
-
-      - name: Setup SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H ${{ secrets.FTP_SERVER }} >> ~/.ssh/known_hosts
+        run: cp -r api dist/api && rm -f dist/api/config.php
 
       - name: Deploy via SCP
-        run: |
-          rsync -avz --delete \
-            --exclude 'api/config.php' \
-            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
-            dist/ \
-            ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_SERVER }}:public_html/
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "dist/."
+          target: "public_html/"
+          strip_components: 1
+          rm: false
