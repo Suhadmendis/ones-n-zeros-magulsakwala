@@ -1,5 +1,5 @@
 import { useId, useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import { GoogleLogin } from '@react-oauth/google'
 import Button from '../components/Button'
 import Card from '../components/Card'
@@ -11,13 +11,20 @@ import './SignUp.css'
 
 const initialForm = { email: '', password: '' }
 
+const GOOGLE_ERROR_FALLBACKS = {
+  google_sign_in_failed: 'Google sign-in failed. Please try again.',
+}
+
 function SignIn() {
   const navigate = useNavigate()
+  const location = useLocation()
+  const justSignedUp = Boolean(location.state?.justSignedUp)
   const { t, locale } = useContent()
   const { signIn, signInWithGoogle } = useAuth()
   const [form, setForm] = useState(initialForm)
   const [errors, setErrors] = useState({})
   const [submitting, setSubmitting] = useState(false)
+  const [mergeNotice, setMergeNotice] = useState(false)
   const uid = useId()
   const fid = (name) => `${uid}-${name}`
 
@@ -26,7 +33,12 @@ function SignIn() {
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }))
   }
 
-  const errorText = (key) => (key ? t('auth', 'form_errors', key) || key : null)
+  const errorText = (key) => {
+    if (!key) return null
+    const translated = t('auth', 'form_errors', key)
+    if (translated && translated !== key) return translated
+    return GOOGLE_ERROR_FALLBACKS[key] ?? key
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -49,11 +61,14 @@ function SignIn() {
 
   const handleGoogleSuccess = async (credentialResponse) => {
     setSubmitting(true)
-    const { ok, errors: apiErrors } = await signInWithGoogle(credentialResponse.credential)
+    const { ok, errors: apiErrors, merged } = await signInWithGoogle(credentialResponse.credential)
     setSubmitting(false)
     if (!ok) {
       setErrors(apiErrors || { form: 'err_generic' })
       return
+    }
+    if (merged) {
+      setMergeNotice(true)
     }
     navigate('/')
   }
@@ -73,6 +88,12 @@ function SignIn() {
       </div>
 
       <Card className="signup-card">
+        {justSignedUp && (
+          <p className="auth-success">Account created! Sign in to continue.</p>
+        )}
+        {mergeNotice && (
+          <p className="auth-success">Your Google account has been linked to your existing Magul Sakwala account.</p>
+        )}
         <form onSubmit={handleSubmit} noValidate>
           <label className="field" htmlFor={fid('email')}>
             <span>{t('auth', 'signin', 'label_email')}</span>
@@ -109,10 +130,12 @@ function SignIn() {
             {errors.password && <span id={fid('password-err')} className="field-error">{errorText(errors.password)}</span>}
           </label>
 
+          <Link to="/forgot-password" className="auth-forgot">Forgot password?</Link>
+
           {errors.form && <p className="field-error">{errorText(errors.form)}</p>}
 
           <Button type="submit" disabled={submitting}>
-            {submitting ? t('auth', 'signin', 'btn_submitting') : t('auth', 'signin', 'btn_submit')}
+            {submitting ? (t('auth', 'signin', 'btn_submitting') || 'Signing in…') : (t('auth', 'signin', 'btn_submit') || 'Sign In')}
           </Button>
         </form>
 
@@ -123,7 +146,7 @@ function SignIn() {
         <div className="google-button-wrap">
           <GoogleLogin
             onSuccess={handleGoogleSuccess}
-            onError={() => setErrors({ form: 'google_verify_failed' })}
+            onError={() => setErrors({ form: 'google_sign_in_failed' })}
             theme="outline"
             shape="pill"
             size="large"

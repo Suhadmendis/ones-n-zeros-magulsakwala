@@ -21,6 +21,26 @@
   margin: 0 auto;
 }
 
+.register-account-banner {
+  background: var(--color-blush);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: var(--color-charcoal);
+  line-height: 160%;
+
+  a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .register-card {
   form {
     display: flex;
@@ -84,6 +104,12 @@
   color: color-mix(in srgb, var(--color-charcoal) 60%, transparent);
   font-weight: 400;
   font-size: 12px;
+}
+
+.field-optional {
+  font-size: 12px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--color-charcoal) 50%, transparent);
 }
 
 .field-success {

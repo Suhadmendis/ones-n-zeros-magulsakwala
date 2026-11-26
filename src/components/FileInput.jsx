@@ -36,6 +36,7 @@ function FileInput({
   const openPicker = () => inputRef.current?.click()
 
   const clear = () => {
+    if (!window.confirm('Remove this photo?')) return
     onChange(null)
   }
 

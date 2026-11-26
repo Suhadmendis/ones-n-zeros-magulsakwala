@@ -61,6 +61,11 @@ function validate(array $body, array $files): array {
         $errors['birthTime'] = 'birth_time_required';
     } elseif (!preg_match('/^([01]\d|2[0-3]):[0-5]\d$/', $birthTime)) {
         $errors['birthTime'] = 'birth_time_invalid';
+    } else {
+        [$btHours, $btMinutes] = explode(':', $birthTime);
+        if ((int) $btHours > 23 || (int) $btMinutes > 59) {
+            $errors['birthTime'] = 'birth_time_invalid';
+        }
     }
 
     $photo = $files['photo'] ?? null;

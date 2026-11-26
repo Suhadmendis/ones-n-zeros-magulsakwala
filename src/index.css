@@ -101,6 +101,10 @@ p {
   margin: 0;
 }
 
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 code {
   font-family: var(--mono);
   display: inline-flex;

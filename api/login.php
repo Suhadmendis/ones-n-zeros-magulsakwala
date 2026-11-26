@@ -25,7 +25,13 @@ try {
     $stmt->execute([':email' => $email]);
     $user = $stmt->fetch();
 
-    if (!$user || !$user['password_hash'] || !password_verify($password, $user['password_hash'])) {
+    if (!$user) {
+        json_response(['errors' => ['form' => 'invalid_credentials']], 401);
+    }
+    if (!$user['password_hash']) {
+        json_response(['errors' => ['form' => 'use_google_login']], 401);
+    }
+    if (!password_verify($password, $user['password_hash'])) {
         json_response(['errors' => ['form' => 'invalid_credentials']], 401);
     }
 

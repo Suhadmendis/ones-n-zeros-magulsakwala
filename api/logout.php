@@ -9,6 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $_SESSION = [];
-session_destroy();
+$destroyed = session_destroy();
+
+if (!$destroyed) {
+    error_log('logout: session_destroy() failed for session ' . session_id());
+    json_response(['errors' => ['form' => 'logout_failed']], 500);
+}
 
 json_response(['ok' => true]);

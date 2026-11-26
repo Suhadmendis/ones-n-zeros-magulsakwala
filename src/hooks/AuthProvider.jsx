@@ -39,11 +39,14 @@ export function AuthProvider({ children }) {
   const signInWithGoogle = useCallback(async (credential) => {
     const { ok, data } = await postJson('/api/google_auth.php', { credential })
     if (ok) setUser(data.user)
-    return { ok, errors: data.errors }
+    return { ok, errors: data.errors, merged: data.merged ?? false }
   }, [])
 
   const signOut = useCallback(async () => {
-    await fetch('/api/logout.php', { method: 'POST', credentials: 'include' })
+    const res = await fetch('/api/logout.php', { method: 'POST', credentials: 'include' })
+    if (!res.ok) {
+      console.error('logout request failed — session may persist on server')
+    }
     setUser(null)
   }, [])
 

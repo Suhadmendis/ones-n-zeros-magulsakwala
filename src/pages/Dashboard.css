@@ -1,0 +1,30 @@
+.dashboard-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-section h1 {
+  margin-bottom: 0;
+}
+
+.dashboard-dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 16px;
+  margin: 16px 0 0;
+  font-size: 15px;
+
+  dt {
+    font-weight: 600;
+    color: color-mix(in srgb, var(--color-charcoal) 65%, transparent);
+  }
+
+  dd {
+    margin: 0;
+    color: var(--color-charcoal);
+  }
+}

@@ -18,16 +18,22 @@ $password = (string) ($body['password'] ?? '');
 $errors = [];
 if ($name === '') {
     $errors['name'] = 'name_required';
+} elseif (strlen($name) < 2) {
+    $errors['name'] = 'name_too_short';
 }
 if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors['email'] = 'email_invalid';
 }
 if (strlen($password) < 8) {
     $errors['password'] = 'password_min_length';
+} elseif (!preg_match('/[A-Za-z]/', $password) || !preg_match('/[0-9]/', $password)) {
+    $errors['password'] = 'password_weak';
 }
 
 if (count($errors) > 0) {
-    json_response(['errors' => $errors], 400);
+    $is_422 = isset($errors['password']) && $errors['password'] === 'password_weak'
+           || isset($errors['name']) && $errors['name'] === 'name_too_short';
+    json_response(['errors' => $errors], $is_422 ? 422 : 400);
 }
 
 try {
