@@ -25,20 +25,17 @@ jobs:
       - name: Copy API into dist
         run: cp -r api dist/api
 
-      - name: Install lftp
-        run: sudo apt-get install -y lftp
-
-      - name: Deploy via lftp
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USER: ${{ secrets.FTP_USERNAME }}
-          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
+      - name: Setup SSH key
         run: |
-          lftp -u "$FTP_USER","$FTP_PASS" "$FTP_SERVER" <<'LFTP'
-            set ftp:ssl-allow false;
-            set net:timeout 30;
-            set net:max-retries 5;
-            set net:reconnect-interval-base 5;
-            mirror -R --delete --exclude config\.php dist/ public_html/;
-            bye
-          LFTP
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.FTP_SERVER }} >> ~/.ssh/known_hosts
+
+      - name: Deploy via SCP
+        run: |
+          rsync -avz --delete \
+            --exclude 'api/config.php' \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            dist/ \
+            ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_SERVER }}:public_html/
