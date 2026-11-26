@@ -33,7 +33,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: public_html/
-          protocol: ftps-legacy
+          protocol: ftps
+          port: 21
           dangerous-clean-slate: false
           exclude: |
             **/config.php
