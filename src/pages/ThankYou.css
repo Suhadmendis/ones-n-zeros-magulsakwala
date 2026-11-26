@@ -29,3 +29,13 @@
   padding: 10px 16px;
   color: var(--color-charcoal);
 }
+
+.ty-account-cta {
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}

@@ -130,13 +130,24 @@ function SignUp() {
             <span id={fid('password-hint')} className="field-hint">
               {t('auth', 'signup', 'password_hint') || 'At least 8 characters, mix letters and numbers.'}
             </span>
+            {form.password.length > 0 && (() => {
+              const len = form.password.length
+              const hasLetter = /[a-zA-Z]/.test(form.password)
+              const hasDigit = /[0-9]/.test(form.password)
+              const level = len < 8 ? 'weak' : (!hasDigit || !hasLetter) ? 'medium' : 'strong'
+              return (
+                <div className="pw-strength" data-level={level}>
+                  <div className="pw-strength-bar" />
+                </div>
+              )
+            })()}
             {errors.password && <span id={fid('password-err')} className="field-error">{errorText(errors.password)}</span>}
           </label>
 
           {errors.form && <p className="field-error">{errorText(errors.form)}</p>}
 
           <Button type="submit" disabled={submitting}>
-            {submitting ? t('auth', 'signup', 'btn_submitting') : t('auth', 'signup', 'btn_submit')}
+            {submitting ? (t('auth', 'signup', 'btn_submitting') || 'Submitting…') : (t('auth', 'signup', 'btn_submit') || 'Submit')}
           </Button>
         </form>
 

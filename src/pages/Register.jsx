@@ -1,5 +1,5 @@
 import { useId, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import Seo from '../components/Seo'
@@ -107,6 +107,9 @@ function Register() {
       </div>
 
       <div className="register-layout">
+        <div className="register-account-banner">
+          Already have an account? <Link to="/sign-in">Sign in</Link> to pre-fill your details. New here? You can <Link to="/sign-up">create an account</Link> before or after registering.
+        </div>
         <Card className="register-card">
           <form onSubmit={handleSubmit} noValidate>
             <label className="field" htmlFor={fid('name')}>
@@ -235,7 +238,7 @@ function Register() {
             {errors.form && <p className="field-error">{errorText(errors.form)}</p>}
 
             <Button type="submit" disabled={submitting}>
-              {submitting ? t('register', 'form', 'btn_submitting') : t('register', 'form', 'btn_submit')}
+              {submitting ? (t('register', 'form', 'btn_submitting') || 'Submitting…') : (t('register', 'form', 'btn_submit') || 'Submit')}
             </Button>
           </form>
         </Card>

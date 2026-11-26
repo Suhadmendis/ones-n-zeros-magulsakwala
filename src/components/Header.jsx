@@ -116,7 +116,7 @@ function Header() {
 
       {user ? (
         <div className="site-header__account">
-          <span className="site-header__user">{user.name}</span>
+          <NavLink to="/dashboard" className="site-header__user">{user.name}</NavLink>
           <button type="button" className="site-header__signout" onClick={handleSignOut}>
             {t('header', 'nav', 'cta_sign_out')}
           </button>

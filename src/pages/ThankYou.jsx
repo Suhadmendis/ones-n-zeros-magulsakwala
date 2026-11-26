@@ -1,4 +1,4 @@
-import { Navigate, useLocation } from 'react-router-dom'
+import { Link, Navigate, useLocation } from 'react-router-dom'
 import Card from '../components/Card'
 import Button from '../components/Button'
 import Seo from '../components/Seo'
@@ -27,7 +27,11 @@ function ThankYou() {
           {registrationId && (
             <p className="ty-ref">Your reference number: <strong>#{registrationId}</strong></p>
           )}
-          <Button to="/">{t('thank-you', 'main', 'cta')}</Button>
+          <div className="ty-account-cta">
+            <p>Sign up to manage your profile and get matched faster.</p>
+            <Button to="/sign-up">Create an account to track your proposal</Button>
+          </div>
+          <Button to="/" variant="outline">{t('thank-you', 'main', 'cta')}</Button>
         </Card>
       </section>
     </>

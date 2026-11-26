@@ -194,7 +194,15 @@ function DatePicker({ value, onChange, placeholder = 'yyyy-mm-dd', min, max, inv
 
           <div className="datepicker-footer">
             <button type="button" className="datepicker-link" onClick={clear}>Clear</button>
-            <button type="button" className="datepicker-link" onClick={goToday}>Today</button>
+            <button
+              type="button"
+              className="datepicker-link"
+              onClick={goToday}
+              disabled={outOfRange(today)}
+              style={outOfRange(today) ? { opacity: 0.4, cursor: 'not-allowed' } : undefined}
+            >
+              Today
+            </button>
           </div>
         </div>
       )}
